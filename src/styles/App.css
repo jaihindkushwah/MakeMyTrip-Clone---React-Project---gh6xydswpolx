@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul.links>*{
+    margin: 10px;
+}
+li{
+    list-style: none;
+}
+.link{
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+    font-weight: 540;
+}
+button.link{
+    padding: 10px 15px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.link:hover{
+    background-color: rgb(173, 176, 178);
+}
+nav{
+    padding: 20px;
+    border-bottom: 1px solid black;
+    
+}
+
+label>*{
+    margin-top:12px ;
+}
+.searchInputs{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    min-height: 20vh;
+    /* background-color: aqua; */
+    border-bottom: 1px solid black;
+}
+.searchInputs .dropDown{
+    margin:10px 0px 0px 100px;
+}
+@media screen and (max-width:360px) {
+    .searchInputs .dropDown{
+        margin:10px 0px 0px 20px;
+        /* background-color: aqua; */
+    }
+}
+
+
+h2{
+    margin-left: 20px;
+}
+.search input{
+    height: 25px;
+    padding: 5px;
+}
+.search button{
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 100px;
+    border: 1px solid black;
+    margin-bottom: -20px;
+    border: 2px solid black;
+}
+
+/* input[type="number"]{
+    width: 50px;
+} */
+
+.checkout {
+    margin: 50px 100px;
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    /* background-color: rgb(234, 241, 241); */
+    height: 45vh;
+}
+.checkout .summary{
+    height: 100%;
+    width: 40%;
+    /* background-color: antiquewhite; */
+    /* color: antiquewhite; */
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    /* align-items: center; */
+    /* margin-bottom: 50px; */
+    padding: 50px 0px;
+}
+.summary >*{
+    margin: 15px;
+}
+.paymentMethod{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.paymentMethod form{
+    padding: 10px 0px;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    flex-direction: column;
+    /* height: 30vh; */
+    /* background-color: rgb(37, 49, 49); */
+}
+.paymentMethod form >*{
+    /* margin-left: 20px; */
+    margin: 5px 0px 5px 0px;
+}
+.paymentMethod form > input{
+    height: 33px;
+    width: 100%;
+    padding: 2px 5px;
+    
+}
+
+.paymentMethod form button{
+    cursor: pointer;
+    width: 80px;
+    padding: 10px 15px;
+}
+.summary .summaryContent{
+    /* width: 100%; */
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-size:1rem;
+    font-weight:500;
+    border-bottom:1px solid black;
+    padding: 10px;
+}
+.summary .summaryContent > *{
+    margin:5px;
+    /* background-color: aquamarine; */
+    /* border: 1px solid black; */
+}
+
+
+
+/* Loader for fetching data */
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 3px solid black;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 

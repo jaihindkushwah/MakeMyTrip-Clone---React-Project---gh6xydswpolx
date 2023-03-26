@@ -1,11 +1,75 @@
 import React from 'react'
 import '../styles/App.css';
+//  import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+
+import Layout from "../pages/Layout.js"
+import Flight from '../pages/Flight.js';
+import Train from '../pages/train';
+import Stay from '../pages/stays';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
+import Checkout from '../pages/Checkout';
+
+
+
 const App = () => {
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/",
+  //     element: <Flight />
+  //   },
+  //   {
+  //     path: "/login",
+  //     element: <Login />
+  //   },
+  //   {
+  //     path:'/train',
+  //     element:<Train/>
+  //   },
+  //   {
+  //     path:'/register',
+  //     element:<Register/>
+  //   },
+  //   {
+  //     path:'/checkout',
+  //     element:<Checkout/>
+  //   },
+  //   {
+  //     path:'/stay',
+  //     element:<Stay/>
+  //   },
+  //   {
+  //     path:'/flight',
+  //     element:<Flight/>
+  //   },
+  //   {
+  //     path: "/items/:id",
+  //     element: <Products />
+  //   }
+  // ]);
 
 
   return (
-    <div id="main">
-    </div>
+    // <div id="main">
+    //   <RouterProvider router={router}></RouterProvider>
+    // </div>
+
+    
+
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Flight></Flight>}></Route>
+        <Route path='/flight' element={<Flight></Flight>}></Route>
+        <Route path='/train' element={<Train></Train>}></Route>
+        <Route path='/stay' element={<Stay></Stay>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
+        {/* <Route path='/' element={<Register></Register>}></Route> */}
+        {/* <Route path='/' element={<Checkout></Checkout>}></Route> */}
+        <Route path='/checkout' element={<Checkout></Checkout>}></Route>
+      </Routes> 
+    </BrowserRouter>
   )
 }
 

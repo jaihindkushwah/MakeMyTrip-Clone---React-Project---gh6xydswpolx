@@ -1,0 +1,79 @@
+
+
+.loginContainer{
+    /* height: 40vh; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    height: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 280px;
+}
+
+.login input{
+    margin: 0px 0px 20px 0px;
+    padding: 6px;
+    height: 40px;
+    width: 100%;
+    /* border:1px solid blue; */
+    outline: none;
+    border-radius: 3px;
+}
+
+.login input:focus{
+    /* background-color: blue; */
+    border:2px solid blue;
+}
+.login>*{
+    margin-bottom: 15px;
+}
+.login button{
+    border: none;
+    color: white;
+    height: 28px;
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(34, 34, 251);
+    text-transform: uppercase;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.login .btnContainer{
+    width:100%;
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.loginContainer form .loginHead h2{
+    font-weight: 500;
+}
+.loginContainer form .loginHead{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.loginHead>img{
+    margin-left: 15px;
+}
+.login .inputFocus{
+    font-size: 12px;
+    align-self: flex-start;
+    margin:-19px 0px -7px 10px;
+    z-index: 1;
+    background-color: white;
+    color: blue;
+    visibility: hidden;
+    font-family: Roboto, sans-serif;
+}
