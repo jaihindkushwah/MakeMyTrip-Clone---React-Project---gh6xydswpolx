@@ -5,8 +5,8 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 import Layout from "../pages/Layout.js"
 import Flight from '../pages/Flight.js';
-import Train from '../pages/train';
-import Stay from '../pages/stays';
+import Train from '../pages/Train';
+import Stay from '../pages/Stays';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Checkout from '../pages/Checkout';
