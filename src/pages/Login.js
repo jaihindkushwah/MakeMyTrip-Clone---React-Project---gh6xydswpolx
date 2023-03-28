@@ -38,9 +38,7 @@ const Login = () => {
                       const name=userData['name'];
                       localStorage.setItem('isLoggedIn',JSON.stringify({name:name,email:email}));
                       alert('Logged in successfully');
-                      navigate('/');
-                      
-                      
+                      navigate(-1)
                     }
                     else{
                       alert('Invalid password');

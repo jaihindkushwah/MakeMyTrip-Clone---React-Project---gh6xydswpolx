@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import logo from "../logo.jpg";
 import "../styles/App.css";
@@ -20,7 +20,11 @@ function Layout() {
   function isLoggedInComponent(){
     const isLoggedIn=JSON.parse(localStorage.getItem("isLoggedIn"));
     const navigate=useNavigate();
+    
+
     if(isLoggedIn){
+      // const[changeUser,setChangeUser]=useState(true);
+      // setInterval(function(){setChangeUser(!changeUser)},5000);
       return(
           <button 
           onClick={(e)=>{
@@ -31,6 +35,7 @@ function Layout() {
           className="link">
           <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
           &nbsp; {isLoggedIn.name.split(" ")[0]}
+          {/* {changeUser?isLoggedIn.name.split(" ")[0]:'Logout'} */}
         </button>
       )
     }else{

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Layout from './Layout'
 import '../styles/Login.css'
 import loginLogo from '../loginLogo.jpg'
@@ -19,6 +19,7 @@ const Login = () => {
     function capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase()+string.slice(1)+'*';
     }
+    const navigate=useNavigate();
 
     return (
       < >
@@ -42,7 +43,11 @@ const Login = () => {
                       if(allUsers[email]==undefined || allUsers[email]==''){
                         let newData={[email]:{'name':name,'password':password}};
                         localStorage.setItem('allUsers',JSON.stringify({...allUsers,...newData}));
-                        console.log(newData);
+                        // console.log(newData);
+                        alert('registered successfully');
+                        e.target.reset();
+                        navigate('/');
+                        
                       }else{
                         alert('User is already exist.');
                         
@@ -50,7 +55,9 @@ const Login = () => {
                   }else{
                     let newData={[email]:{'name':name,'password':password}};
                     localStorage.setItem('allUsers',JSON.stringify({...allUsers,...newData}));
-                    // console.log(newData);
+                    alert('registered successfully');
+                    e.target.reset();
+                    navigate('/');
                   }
                    
                 }

@@ -34,8 +34,14 @@ function Availability({data,inputData}) {
                             e.preventDefault();
                             // const data=new FormData(e.target);
                             let p=e.target.querySelector('.price').innerHTML;
-                            
-                            navigate('../checkout',{state:{'price':p}})
+                            const isLoggedIn=localStorage.getItem('isLoggedIn');
+                            if(isLoggedIn){
+                              navigate('../checkout',{state:{'price':p}})
+                            }
+                            else{
+                              navigate('../login');
+                            }
+
                             
                           }}
                         >
