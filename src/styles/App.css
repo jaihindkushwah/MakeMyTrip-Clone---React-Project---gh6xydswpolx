@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+nav , .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+
 ul.links>*{
     margin: 10px;
 }
@@ -46,10 +54,24 @@ label>*{
 .searchInputs .dropDown{
     margin:10px 0px 0px 100px;
 }
+/* display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-around',flexFlow:'wrap' */
+
+.searchInputs>.inputContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: wrap;
+
+}
+.searchInputs>.inputContainer label{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 @media screen and (max-width:360px) {
     .searchInputs .dropDown{
-        margin:10px 0px 0px 20px;
-        /* background-color: aqua; */
+         margin:10px 0px 0px 70px;
     }
 }
 
@@ -155,6 +177,59 @@ h2{
     /* background-color: aquamarine; */
     /* border: 1px solid black; */
 }
+
+
+
+
+
+
+@media screen and (max-width:540px) {
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    .searchInputs>.inputContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-around; */
+        /* flex-flow: wrap; */
+    
+    }
+    .searchInputs>.inputContainer label{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0px;
+        font-size: 14px;
+        
+        /* justify-content: flex-start; */
+    }
+    .searchInputs>.inputContainer label>*{
+        margin: 0px;
+    }
+    ul.links{
+        margin: 0px;
+    }
+    .searchInputs>.inputContainer label input{
+        margin-left: 10px;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:840px) {
     .checkout{
         /* margin: 10px; */
@@ -201,3 +276,4 @@ h2{
         transform: rotate(360deg);
     }
 } 
+

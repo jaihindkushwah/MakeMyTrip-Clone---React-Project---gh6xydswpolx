@@ -55,7 +55,8 @@ function Layout() {
 
   return (
     <>
-      <nav style={style}>
+    {/* style={style} */}
+      <nav >
         <ul>
           <li>
             <Link to="/">
@@ -67,7 +68,8 @@ function Layout() {
             </Link>
           </li>
         </ul>
-        <ul className="links" style={{...style,flexFlow:'wrap'}}>
+        {/* style={{...style,flexFlow:'wrap'}} */}
+        <ul className="links" >
           <li>
             <Link to="/flight" className="link">
               Flights

@@ -34,6 +34,8 @@ function Stay(){
         <Search list={list} onSubmit={setInputs} dropDown={dropDown}></Search>
         <h2 style={{marginTop:'50px'}}>Available Hotels</h2>
         <Availability data={data} inputData={inputs} ></Availability>
+        {console.log(data)}
+            {console.log(inputs)}
         </>
     )
 }

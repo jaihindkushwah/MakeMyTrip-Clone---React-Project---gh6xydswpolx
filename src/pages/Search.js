@@ -9,6 +9,7 @@ function Search(props) {
 
   const updateData = (e) => {
       setData({
+          [props.dropDown[0].toLowerCase()]:props.dropDown[1],
           ...data,
           [e.target.name]: e.target.value
       })
@@ -25,16 +26,16 @@ function Search(props) {
         >
          <div className="searchInputs">
           <div className="dropDown">{props.dropDown[0]} :  &nbsp;
-              <select style={{padding:'5px',borderRadius:'5px'}} name='trip-type' onChange={updateData}>
+              <select style={{padding:'5px',borderRadius:'5px'}} name={props.dropDown[0].toLowerCase()} onChange={updateData}>
                 <option  value={props.dropDown[1]}>{props.dropDown[1]}</option>
                 <option value={props.dropDown[2]}> {props.dropDown[2]}</option>
               </select>
             </div> 
-          <div style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-around',flexFlow:'wrap'}} >
+          <div className="inputContainer" >
           {
               props.list.map((item,i)=>{
                   return (<>
-                      <label style={{margin:'10px'}}>{item.name.toUpperCase()}<br></br><input onChange={updateData} name={item.name.toLowerCase()} type={item.type}></input></label>
+                      <label style={{margin:'10px'}}>{item.name.toUpperCase()}<input onChange={updateData} name={item.name.toLowerCase()} type={item.type}></input></label>
                   </>)
               })
           }
