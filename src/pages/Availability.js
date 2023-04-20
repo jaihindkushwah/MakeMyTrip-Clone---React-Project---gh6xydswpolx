@@ -6,6 +6,7 @@ import { Link , useNavigate} from 'react-router-dom';
 
 function Availability({data,inputData}) {
 
+  
 
   const style={'display':'flex','alignItems':'center',flexFlow:'wrap','width':'100%','justifyContent':'center'};
 
@@ -21,11 +22,24 @@ function Availability({data,inputData}) {
   }
 
   // const[price,setPrice]=useState(0);
+  const[isLoading,setLoading]=useState(true);
+  const[loadingErr,setLoadingError]=useState();
   const navigate=useNavigate();
+  
+  // const dataConnectionCheck=()=>{
+  //   setTimeout(()=>{
+  //     setLoading(false);
+  //     setLoadingError("No data available");
+  //   },30*1000);
+  // }
+  // if(data.length===0){
+  //   dataConnectionCheck();
+  // }
 
   return (
     <div style={style}>
-      {data.length===0 && <span class="loader"></span>}
+      {data.length===0 && isLoading && <span class="loader"></span>}
+      <span style={{color:'red'}}>{loadingErr}</span>
         {
           data.map((item)=>{
               // console.log(item);

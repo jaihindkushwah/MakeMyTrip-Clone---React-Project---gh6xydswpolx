@@ -8,16 +8,18 @@ const Login = () => {
   const onFocusForInput=(e)=>{
     e.target.placeholder='';
     e.target.previousElementSibling.style.visibility='visible';
-    
-    
+
   }
+
   const onBlurForInput=(e)=>{
       e.target.placeholder=capitalizeFirstLetter(e.target.name);
       e.target.previousElementSibling.style.visibility='hidden';
   }
+
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1)+'*';
   }
+  
   const navigate=useNavigate();
 
     return (

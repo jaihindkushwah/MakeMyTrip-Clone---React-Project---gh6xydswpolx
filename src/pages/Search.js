@@ -11,16 +11,18 @@ function Search(props) {
       setData({
           [props.dropDown[0].toLowerCase()]:props.dropDown[1],
           ...data,
-          [e.target.name]: e.target.value
+          [e.target.name]: e.target.value.toLowerCase()
       })
   }
   return (
     <>
       <form className="search"
+      
         onSubmit={(e)=>{
           // const data = new FormData(e.target);
             e.preventDefault();
             props.onSubmit(data);
+            
           }}
             
         >

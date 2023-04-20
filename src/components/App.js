@@ -17,36 +17,40 @@ const App = () => {
   // const router = createBrowserRouter([
   //   {
   //     path: "/",
-  //     element: <Flight />
-  //   },
-  //   {
-  //     path: "/login",
-  //     element: <Login />
-  //   },
-  //   {
-  //     path:'/train',
-  //     element:<Train/>
-  //   },
-  //   {
-  //     path:'/register',
-  //     element:<Register/>
-  //   },
-  //   {
-  //     path:'/checkout',
-  //     element:<Checkout/>
-  //   },
-  //   {
-  //     path:'/stay',
-  //     element:<Stay/>
-  //   },
-  //   {
-  //     path:'/flight',
-  //     element:<Flight/>
-  //   },
-  //   {
-  //     path: "/items/:id",
-  //     element: <Products />
+  //     element: <Flight />,
+  //     children:[
+  //       {
+  //         path: "/login",
+  //         element: <Login />
+  //       },
+  //       {
+  //         path:'/train',
+  //         element:<Train/>
+  //       },
+  //       {
+  //         path:'/register',
+  //         element:<Register/>
+  //       },
+  //       {
+  //         path:'/checkout',
+  //         element:<Checkout/>
+  //       },
+  //       {
+  //         path:'/stay',
+  //         element:<Stay/>
+  //       },
+  //       {
+  //         path:'/flight',
+  //         element:<Flight/>
+  //       }
+  //     ]
   //   }
+    
+    // ,
+    // {
+    //   path: "/items/:id",
+    //   element: <Products />
+    // }
   // ]);
 
 

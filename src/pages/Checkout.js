@@ -18,6 +18,13 @@ function Checkout(props) {
     const price=useLocation().state.price;
     console.log(price);
     const navigate=useNavigate();
+    const numberValidator=(e)=>{
+        if(isNaN(e.target.value)){
+            alert("please enter number");
+            e.target.value="";
+        }
+    }
+
   return (
     <>  <Layout></Layout>
         <div className='checkout'>
@@ -50,9 +57,9 @@ function Checkout(props) {
                     }>
                     <h2>Payment Method</h2>
                     <input type="text" name="nameoncard" placeholder='Name on Card' />
-                    <input type="text" maxLength={16} name="cardno" placeholder='Card Number' />
-                    <input type="text" maxLength={4} name="expirydate" placeholder='Expiry Date' />
-                    <input type="text" maxLength={3} name="cvv" placeholder='CVV' />
+                    <input type="text" maxLength={16} onChange={numberValidator}  name="cardno" placeholder='Card Number' />
+                    <input type="text" maxLength={4}  onChange={numberValidator} name="expirydate" placeholder='Expiry Date' />
+                    <input type="text" maxLength={3}  onChange={numberValidator} name="cvv" placeholder='CVV' />
                     <button type="submit">Pay</button>
                 </form>
 
