@@ -4,16 +4,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 function Search(props) {
-  // const[inputs,setInputs]=useState({});
-  const [data, setData] = useState({})
 
+  const [data, setData] = useState({})
   const updateData = (e) => {
       setData({
-          [props.dropDown[0].toLowerCase()]:props.dropDown[1],
           ...data,
           [e.target.name]: e.target.value.toLowerCase()
       })
   }
+
+
   return (
     <>
       <form className="search"
@@ -23,12 +23,16 @@ function Search(props) {
             e.preventDefault();
             props.onSubmit(data);
             
-          }}
-            
+          }}  
         >
+
          <div className="searchInputs">
           <div className="dropDown">{props.dropDown[0]} :  &nbsp;
-              <select style={{padding:'5px',borderRadius:'5px'}} name={props.dropDown[0].toLowerCase()} onChange={updateData}>
+              <select style={{padding:'5px',borderRadius:'5px'}} name={props.dropDown[0].toLowerCase()} onChange={(e)=>{
+                    props.selectedDropdown(e.target.value.toLowerCase());
+      
+                }}
+                >
                 <option  value={props.dropDown[1]}>{props.dropDown[1]}</option>
                 <option value={props.dropDown[2]}> {props.dropDown[2]}</option>
               </select>

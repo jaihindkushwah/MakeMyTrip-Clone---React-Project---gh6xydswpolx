@@ -1,6 +1,6 @@
 import React from 'react'
 import { json, Link, useNavigate } from 'react-router-dom';
-import Layout from './Layout'
+
 import '../styles/Login.css'
 import loginLogo from '../loginLogo.jpg'
 
@@ -19,14 +19,16 @@ const Login = () => {
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1)+'*';
   }
-  
+
   const navigate=useNavigate();
 
     return (
       < >
-        <Layout></Layout>
         <div className='loginContainer'>
           <form className='login'
+
+          // Login form validation 
+
            onSubmit={
             (e)=>{e.preventDefault();
               const data=new FormData(e.target);
@@ -55,14 +57,17 @@ const Login = () => {
                 alert('Please enter all input Field')
               }
               
-
             }}>
+
+
+
             <div className='loginHead'>
               <img src={loginLogo} width='30'></img>
               <h2>Log In</h2>
             </div>
-            {/* <div className='inputs'> */}
-                
+
+            {/* Input Fields */}
+
             <div className='inputFocus'>Email*</div>
                 <input type="email"  name="email"
                   onBlur={onBlurForInput}
@@ -76,6 +81,8 @@ const Login = () => {
                 onBlur={onBlurForInput}
               onFocus={onFocusForInput}
               /> 
+
+      {/* Login Button sections */}
 
             {/* </div>   */}
             <div className='btnContainer'>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-import Layout from './Layout'
 import '../styles/Login.css'
 import loginLogo from '../loginLogo.jpg'
 
@@ -23,7 +22,6 @@ const Login = () => {
 
     return (
       < >
-        <Layout></Layout>
         <div className='loginContainer'>
           <form className='login' 
 

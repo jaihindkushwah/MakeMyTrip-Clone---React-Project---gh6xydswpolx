@@ -1,7 +1,6 @@
-import React from 'react'
-import Layout from './Layout'
-import '../styles/App.css'
-import {useLocation, useNavigate} from 'react-router-dom'
+import React from 'react';
+import '../styles/App.css';
+import {useLocation, useNavigate} from 'react-router-dom';
 
 
 function Div({title,price}){
@@ -26,7 +25,7 @@ function Checkout(props) {
     }
 
   return (
-    <>  <Layout></Layout>
+    <>  
         <div className='checkout'>
             <div className='summary'>
                 <h2>Fare Summary</h2>
@@ -47,7 +46,9 @@ function Checkout(props) {
                                 navigate('/login',{state:{'path':'checkout'}})
                             }
                             else{
-                                alert("Payment has done successfully.")
+                                alert("Payment has done successfully.");
+                                e.target.value='';
+                                navigate('/');
                             }
                         }
                         else{

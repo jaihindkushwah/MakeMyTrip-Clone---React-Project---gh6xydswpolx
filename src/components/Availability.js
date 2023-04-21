@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-// import Checkout from './Checkout.js'
 import { Link , useNavigate} from 'react-router-dom';
 
 
 
-function Availability({data,inputData}) {
+function Availability({data}) {
 
   
 
@@ -21,32 +20,24 @@ function Availability({data,inputData}) {
    return <h4>{capitalizeFirstLetter(d)}</h4>
   }
 
-  // const[price,setPrice]=useState(0);
   const[isLoading,setLoading]=useState(true);
-  const[loadingErr,setLoadingError]=useState();
+  
   const navigate=useNavigate();
   
-  // const dataConnectionCheck=()=>{
-  //   setTimeout(()=>{
-  //     setLoading(false);
-  //     setLoadingError("No data available");
-  //   },30*1000);
-  // }
-  // if(data.length===0){
-  //   dataConnectionCheck();
-  // }
 
   return (
     <div style={style}>
-      {data.length===0 && isLoading && <span class="loader"></span>}
-      <span style={{color:'red'}}>{loadingErr}</span>
+      {data.length===0 && isLoading && <div style={{...style,flexDirection:'column'}}>
+        <div class="loader"></div>
+        <div style={{color:'red',marginTop:'10px'}}>No data found!!!!</div>
+        </div>}
+
         {
           data.map((item)=>{
               // console.log(item);
-              return (<form style={{display:'flex','margin':'20px','alignItems':'center',justifyContent:'space-around',border:'1px solid black','width':'90%','flexFlow':'wrap','flexDirection':'row'}}
+              return (<form style={{...style,'margin':'20px',justifyContent:'space-around',border:'1px solid black','width':'90%'}}
                           onSubmit={(e)=>{
                             e.preventDefault();
-                            // const data=new FormData(e.target);
                             let p=e.target.querySelector('.price').innerHTML;
                             const isLoggedIn=localStorage.getItem('isLoggedIn');
                             if(isLoggedIn){
@@ -77,8 +68,6 @@ function Availability({data,inputData}) {
                 </form>)
             })
         }
-        {/* {console.log(data)}
-        {console.log(inputData)} */}
         
     </div>
   )

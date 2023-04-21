@@ -4,10 +4,7 @@ import logo from "../logo.jpg";
 import "../styles/App.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { faArrowDown, faUser } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 function Layout() {
   const style = {
@@ -23,8 +20,6 @@ function Layout() {
     
 
     if(isLoggedIn){
-      // const[changeUser,setChangeUser]=useState(true);
-      // setInterval(function(){setChangeUser(!changeUser)},5000);
       return(
           <button 
           onClick={(e)=>{

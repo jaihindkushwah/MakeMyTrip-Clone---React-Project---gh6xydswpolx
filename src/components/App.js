@@ -3,14 +3,13 @@ import '../styles/App.css';
 //  import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
-import Layout from "../pages/Layout.js"
 import Flight from '../pages/Flight.js';
 import Train from '../pages/Train';
 import Stay from '../pages/Stays';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Checkout from '../pages/Checkout';
-
+import Layout from './Layout';
 
 
 const App = () => {
@@ -57,11 +56,10 @@ const App = () => {
   return (
     // <div id="main">
     //   <RouterProvider router={router}></RouterProvider>
-    // </div>
-
-    
-
+    //   </div>
+    <div id='main'>
     <BrowserRouter>
+    <Layout></Layout>
       <Routes>
         <Route path='/' element={<Flight></Flight>}></Route>
         <Route path='/flight' element={<Flight></Flight>}></Route>
@@ -74,6 +72,7 @@ const App = () => {
         <Route path='/checkout' element={<Checkout></Checkout>}></Route>
       </Routes> 
     </BrowserRouter>
+    </div>
   )
 }
 
