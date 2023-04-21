@@ -72,7 +72,7 @@ function Layout() {
           </li>
           <li>
             <Link to="/stay" className="link">
-              Stays
+              Hotels
             </Link>
           </li>
           <li>

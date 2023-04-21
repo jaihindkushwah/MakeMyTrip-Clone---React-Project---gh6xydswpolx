@@ -21,7 +21,13 @@ function Search(props) {
         onSubmit={(e)=>{
           // const data = new FormData(e.target);
             e.preventDefault();
-            props.onSubmit(data);
+            if(Object.keys(data).length>2){
+              props.onSubmit(data);
+            }
+            else{
+              alert('Please fill all inputs field');
+            }
+            
             
           }}  
         >
