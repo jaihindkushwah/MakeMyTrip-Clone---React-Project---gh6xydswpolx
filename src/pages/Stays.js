@@ -33,19 +33,29 @@ function Stay() {
   const filteredData = (data) => {
     console.log(inputs);
     console.log(selectedDropdown);
+    
     let filterData = [];
 
     if (Object.entries(inputs).length > 0) {
-      filterData = [
-        ...data.filter(
-          (data) =>
-            data["city"].toLowerCase() === inputs["city,or location"] &&
-            data["check_in"] === inputs["check-in"] &&
-            data["check_out"] === inputs["check-out"] &&
-            data["guests"].includes(inputs["guests"]) &&
-            data["room_type"].toLowerCase() === selectedDropdown
-        ),
-      ];
+      if(Object.keys(inputs).includes('guests')){
+        filterData = [
+          ...data.filter(
+            (data) =>
+              data["city"].toLowerCase() === inputs["city,or location"] &&
+              data["check_in"] === inputs["check-in"] &&
+              data["check_out"] === inputs["check-out"] &&
+              data["guests"].includes(inputs["guests"]) &&
+              data["room_type"].toLowerCase() === selectedDropdown
+          ),
+        ];
+          
+      }
+      else{
+        alert('Please enter guests input.');
+        setStoredData([...data]);
+        return;
+      }
+      
     }
 
     if (filterData.length === 0 && Object.entries(inputs).length === 0) {

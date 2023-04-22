@@ -12,6 +12,9 @@ function Search(props) {
           [e.target.name]: e.target.value.toLowerCase()
       })
   }
+  const checkAllInputs=()=>{
+      return !Object.values(data).includes('');
+  }
 
 
   return (
@@ -21,7 +24,7 @@ function Search(props) {
         onSubmit={(e)=>{
           // const data = new FormData(e.target);
             e.preventDefault();
-            if(Object.keys(data).length>2){
+            if(Object.keys(data).length>2 && checkAllInputs()){
               props.onSubmit(data);
             }
             else{
