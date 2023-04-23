@@ -82,7 +82,7 @@ function Flight() {
       ></Search>
       <h2 style={{ marginTop: "50px" }}>Available Tickets</h2>
       <Availability data={storedData}></Availability>
-      {console.log(selectedDropdown)};{/* {console.log(flightInput)} */}
+      {console.log(selectedDropdown)}{/* {console.log(flightInput)} */}
     </>
   );
 }

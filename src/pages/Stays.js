@@ -80,7 +80,7 @@ function Stay() {
       {console.log(storedData)}
       {console.log(inputs)}
     </>
-  );
+  )
 }
 
-export default Stay;
+export default Stay
