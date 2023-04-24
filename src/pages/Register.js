@@ -43,6 +43,7 @@ const Login = () => {
                         localStorage.setItem('allUsers',JSON.stringify({...allUsers,...newData}));
                         // console.log(newData);
                         alert('registered successfully');
+                        localStorage.setItem('isLoggedIn',JSON.stringify({name:name,email:email}));
                         e.target.reset();
                         navigate('/');
                         
@@ -54,6 +55,9 @@ const Login = () => {
                     let newData={[email]:{'name':name,'password':password}};
                     localStorage.setItem('allUsers',JSON.stringify({...allUsers,...newData}));
                     alert('registered successfully');
+
+                    localStorage.setItem('isLoggedIn',JSON.stringify({name:name,email:email}));
+                    
                     e.target.reset();
                     navigate('/');
                   }

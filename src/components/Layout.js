@@ -6,6 +6,44 @@ import "../styles/App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faUser } from "@fortawesome/free-solid-svg-icons";
 
+
+
+function IsLoggedInComponent({activate,setActivate}){
+  const isLoggedIn=JSON.parse(localStorage.getItem("isLoggedIn"));
+  const navigate=useNavigate();
+  
+
+  if(isLoggedIn){
+    return(
+        <button 
+        onClick={(e)=>{
+          setActivate('flight');
+          alert('Log out successfully');
+          localStorage.removeItem('isLoggedIn');
+          navigate('/');
+        }} 
+        className="link">
+        <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
+        &nbsp; {isLoggedIn.name.split(" ")[0]}
+        {/* {changeUser?isLoggedIn.name.split(" ")[0]:'Logout'} */}
+      </button>
+    )
+  }else{
+    return(
+        <button  style={ activate==='login' ? {backgroundColor:"#ccc"}:{}}
+          onClick={(e)=>{
+            setActivate('login');
+            navigate('/login');
+          }}
+        className="link">
+        <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>&nbsp;
+        Login
+      </button>
+    )
+  }
+   
+}
+
 function Layout() {
   const style = {
     display: "flex",
@@ -14,39 +52,8 @@ function Layout() {
     flexDirection: "row",
     // flexFlow:'wrap'
   };
-  function isLoggedInComponent(){
-    const isLoggedIn=JSON.parse(localStorage.getItem("isLoggedIn"));
-    const navigate=useNavigate();
-    
-
-    if(isLoggedIn){
-      return(
-          <button 
-          onClick={(e)=>{
-            alert('Log out successfully');
-            localStorage.removeItem('isLoggedIn');
-            navigate('/');
-          }} 
-          className="link">
-          <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
-          &nbsp; {isLoggedIn.name.split(" ")[0]}
-          {/* {changeUser?isLoggedIn.name.split(" ")[0]:'Logout'} */}
-        </button>
-      )
-    }else{
-      return(
-          <button  
-            onClick={(e)=>{
-              navigate('/login');
-            }}
-          className="link">
-          <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>&nbsp;
-          Login
-        </button>
-      )
-    }
-     
-  }
+  const [activate,setActivate]=useState('flight');
+  
 
   return (
     <>
@@ -54,7 +61,7 @@ function Layout() {
       <nav >
         <ul>
           <li>
-            <Link to="/">
+            <Link to="/" onClick={()=>{setActivate('flight')}}>
               <img
                 src={logo}
                 width="120px"
@@ -64,25 +71,26 @@ function Layout() {
           </li>
         </ul>
         {/* style={{...style,flexFlow:'wrap'}} */}
+        {console.log(activate)}
         <ul className="links" >
           <li>
-            <Link to="/flight" className="link">
+            <Link style={activate==='flight' || activate===''? {backgroundColor:"#ccc"}:{}} onClick={()=>{setActivate('flight')}}  to="/flight" className="link">
               Flights
             </Link>
           </li>
           <li>
-            <Link to="/stay" className="link">
+            <Link to="/stay" style={activate==='stay' ? {backgroundColor:"#ccc"}:{}} onClick={()=>{setActivate('stay')}} className="link">
               Hotels
             </Link>
           </li>
           <li>
-            <Link to="/train" className="link">
+            <Link to="/train" style={activate==='train' ? {backgroundColor:"#ccc"}:{}} onClick={()=>{setActivate('train')}} className="link">
               Trains
             </Link>
           </li>
 
-          <li>
-            {isLoggedInComponent()}
+          <li >
+            <IsLoggedInComponent activate={activate} setActivate ={setActivate}/>
           </li>
         </ul>
       </nav>
