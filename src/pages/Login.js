@@ -87,7 +87,7 @@ const Login = () => {
             {/* </div>   */}
             <div className='btnContainer'>
               <button  type="Submit">Login</button>
-              <Link to='/Register' style={{fontSize:"15px",padding:'10px 0px 0px',color:'blue'}}>New user? Sign Up</Link>
+              <Link to='/register' style={{fontSize:"15px",padding:'10px 0px 0px',color:'blue'}}>New user? Sign Up</Link>
             </div>
           </form>
         </div>

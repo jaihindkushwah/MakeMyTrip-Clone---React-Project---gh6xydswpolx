@@ -31,7 +31,7 @@ function Flight() {
         // setStoredData([...res]);
       });
   },[]);
-  console.log(storedData);
+  // console.log(storedData);
 
   useEffect(()=>{
     filteredData(apiData);
@@ -39,7 +39,7 @@ function Flight() {
 
   //   Filter data according to user input
   const filteredData = (data) => {
-    console.log(flightInput);
+    // console.log(flightInput);
     let filterFlightData = [];
 
     if (Object.entries(flightInput).length > 0) {
@@ -73,10 +73,10 @@ function Flight() {
       filterFlightData.length === 0 &&
       Object.entries(flightInput).length === 0
     ) {
-      console.log(data);
+      // console.log(data);
       setStoredData([...data]);
     } else {
-      console.log(filterFlightData);
+      // console.log(filterFlightData);
       setStoredData([...filterFlightData]);
     }
   };
@@ -90,7 +90,7 @@ function Flight() {
       ></Search>
       <h2 style={{ marginTop: "50px" }}>Available Tickets</h2>
       <Availability data={storedData}></Availability>
-      {console.log(selectedDropdown)}{/* {console.log(flightInput)} */}
+      {/* {console.log(selectedDropdown)}{console.log(flightInput)} */}
     </>
   );
 }

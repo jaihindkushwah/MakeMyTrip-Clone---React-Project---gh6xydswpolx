@@ -28,7 +28,6 @@ function Availability({data}) {
   return (
     <div style={style}>
       {data.length===0 && isLoading && <div style={{...style,flexDirection:'column'}}>
-        <div class="loader"></div>
         <div style={{color:'red',marginTop:'10px'}}>No data found!!!!</div>
         </div>}
 

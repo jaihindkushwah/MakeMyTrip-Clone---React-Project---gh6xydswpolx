@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { Outlet, Link, useNavigate, useLocation} from "react-router-dom";
 import logo from "../logo.jpg";
 import "../styles/App.css";
 
@@ -8,7 +8,7 @@ import { faArrowDown, faUser } from "@fortawesome/free-solid-svg-icons";
 
 
 
-function IsLoggedInComponent({activate,setActivate}){
+function IsLoggedInComponent({activate}){
   const isLoggedIn=JSON.parse(localStorage.getItem("isLoggedIn"));
   const navigate=useNavigate();
   
@@ -17,7 +17,6 @@ function IsLoggedInComponent({activate,setActivate}){
     return(
         <button 
         onClick={(e)=>{
-          setActivate('flight');
           alert('Log out successfully');
           localStorage.removeItem('isLoggedIn');
           navigate('/');
@@ -30,9 +29,9 @@ function IsLoggedInComponent({activate,setActivate}){
     )
   }else{
     return(
-        <button  style={ activate==='login' ? {backgroundColor:"#ccc"}:{}}
+        <button  style={ activate==='login'|| activate==='register' ? {backgroundColor:"#ccc"}:{}}
           onClick={(e)=>{
-            setActivate('login');
+            
             navigate('/login');
           }}
         className="link">
@@ -52,16 +51,16 @@ function Layout() {
     flexDirection: "row",
     // flexFlow:'wrap'
   };
-  const [activate,setActivate]=useState('flight');
-  
-
+  // const [activate,setActivate]=useState('flight');
+  const location=useLocation();
+  let activate=location.pathname.split("/")[1];
   return (
     <>
     {/* style={style} */}
       <nav >
         <ul>
           <li>
-            <Link to="/" onClick={()=>{setActivate('flight')}}>
+            <Link to="/" >
               <img
                 src={logo}
                 width="120px"
@@ -71,26 +70,25 @@ function Layout() {
           </li>
         </ul>
         {/* style={{...style,flexFlow:'wrap'}} */}
-        {console.log(activate)}
         <ul className="links" >
           <li>
-            <Link style={activate==='flight' || activate===''? {backgroundColor:"#ccc"}:{}} onClick={()=>{setActivate('flight')}}  to="/flight" className="link">
+            <Link style={activate==='flight' || activate===''? {backgroundColor:"#ccc"}:{}}  to="/flight" className="link">
               Flights
             </Link>
           </li>
           <li>
-            <Link to="/stay" style={activate==='stay' ? {backgroundColor:"#ccc"}:{}} onClick={()=>{setActivate('stay')}} className="link">
+            <Link to="/stay" style={activate==='stay' ? {backgroundColor:"#ccc"}:{}}className="link">
               Hotels
             </Link>
           </li>
           <li>
-            <Link to="/train" style={activate==='train' ? {backgroundColor:"#ccc"}:{}} onClick={()=>{setActivate('train')}} className="link">
+            <Link to="/train" style={activate==='train' ? {backgroundColor:"#ccc"}:{}} className="link">
               Trains
             </Link>
           </li>
 
           <li >
-            <IsLoggedInComponent activate={activate} setActivate ={setActivate}/>
+            <IsLoggedInComponent activate={activate}/>
           </li>
         </ul>
       </nav>
