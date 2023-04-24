@@ -12,6 +12,7 @@ const dropDown = ["Trip-Type", "OneWay", "BothWay"];
 
 function Train() {
   const [storedData, setStoredData] = useState([]);
+  const [apiData,setApiData]=useState([]);
   const [selectedDropdown, setSelectedDropdown] = useState("oneway");
 
   const [inputs, setInputs] = useState({});
@@ -24,9 +25,15 @@ function Train() {
         return res.json();
       })
       .then((res) => {
-        filteredData(res);
+        setApiData([...res]);
       });
-  }, [inputs, selectedDropdown]);
+  }, []);
+
+
+  useEffect(()=>{
+    filteredData(apiData);
+  },[inputs,selectedDropdown,apiData]);
+
 
   const filteredData = (data) => {
     console.log(selectedDropdown);

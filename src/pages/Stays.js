@@ -14,6 +14,7 @@ function Stay() {
   //   const [data, setData] = useState([]);
   // const [storedData, setStoredData] = useState([]);
   const [storedData, setStoredData] = useState([]);
+  const [apiData,setApiData]=useState([]);
   const [selectedDropdown, setSelectedDropdown] = useState("single");
 
   const [inputs, setInputs] = useState({});
@@ -26,9 +27,14 @@ function Stay() {
         return res.json();
       })
       .then((res) => {
-        filteredData(res);
+        setApiData([...res]);
       });
-  }, [inputs, selectedDropdown]);
+  }, []);
+
+  useEffect(()=>{
+    filteredData(apiData);
+  },[inputs,selectedDropdown,apiData]);
+
 
   const filteredData = (data) => {
     console.log(inputs);

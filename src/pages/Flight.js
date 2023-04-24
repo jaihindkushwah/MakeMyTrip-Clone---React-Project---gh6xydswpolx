@@ -13,6 +13,7 @@ const dropDown = ["Trip-Type", "OneWay", "BothWay"];
 
 function Flight() {
   const [storedData, setStoredData] = useState([]);
+  const [apiData,setApiData]=useState([]);
 
   const [selectedDropdown, setSelectedDropdown] = useState("oneway");
 
@@ -25,9 +26,16 @@ function Flight() {
         return res.json();
       })
       .then((res) => {
-        filteredData(res);
+        // filteredData(res);
+        setApiData([...res]);
+        // setStoredData([...res]);
       });
-  }, [flightInput, selectedDropdown]);
+  },[]);
+  console.log(storedData);
+
+  useEffect(()=>{
+    filteredData(apiData);
+  },[flightInput,selectedDropdown,apiData]);
 
   //   Filter data according to user input
   const filteredData = (data) => {
