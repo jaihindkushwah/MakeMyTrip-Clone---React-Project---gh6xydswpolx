@@ -18,8 +18,9 @@ function Search(props) {
 
 
   return (
-    <>
+    <><div style={{padding:'50px'}} className="availability">
       <form className="search"
+      style={{backgroundColor:'white',borderRadius:'10px'}}
       
         onSubmit={(e)=>{
           // const data = new FormData(e.target);
@@ -61,6 +62,10 @@ function Search(props) {
          </div>
         
       </form>
+        <div style={{ paddingTop: "50px" }}>
+          <h2 style={{color:'white'}} >{props.title}</h2>
+          </div>
+      </div>
     </>
   );
 }

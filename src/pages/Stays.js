@@ -80,8 +80,8 @@ function Stay() {
         onSubmit={setInputs}
         dropDown={dropDown}
         selectedDropdown={setSelectedDropdown}
+        title={'Available Hotels'}
       ></Search>
-      <h2 style={{ marginTop: "50px" }}>Available Hotels</h2>
       <Availability data={storedData}></Availability>
       {console.log(storedData)}
       {console.log(inputs)}

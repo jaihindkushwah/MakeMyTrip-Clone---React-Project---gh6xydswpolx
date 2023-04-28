@@ -5,6 +5,7 @@ import "../styles/App.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faUser } from "@fortawesome/free-solid-svg-icons";
+import Footer from "./Footer";
 
 
 
@@ -29,7 +30,7 @@ function IsLoggedInComponent({activate}){
     )
   }else{
     return(
-        <button  style={ activate==='login'|| activate==='register' ? {backgroundColor:"#ccc"}:{}}
+        <button  style={ activate==='login'|| activate==='register' ? {backgroundColor:"white",color:'blue'}:{}}
           onClick={(e)=>{
             
             navigate('/login');
@@ -57,13 +58,14 @@ function Layout() {
   return (
     <>
     {/* style={style} */}
-      <nav >
+      <nav style={{top:'0',left:'0',position:'sticky'}} >
         <ul>
           <li>
             <Link to="/" >
               <img
-                src={logo}
+                src='https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/header/mmtLogoWhite.png'
                 width="120px"
+                color="white"
                 alt="makemytrip.logo"
               ></img>
             </Link>
@@ -71,18 +73,18 @@ function Layout() {
         </ul>
         {/* style={{...style,flexFlow:'wrap'}} */}
         <ul className="links" >
-          <li>
-            <Link style={activate==='flight' || activate===''? {backgroundColor:"#ccc"}:{}}  to="/flight" className="link">
+          <li style={{color:'white'}}>
+            <Link style={activate==='flight' || activate===''? {backgroundColor:"white",color:'blue'}:{color:'white'}}  to="/flight" className="link">
               Flights
             </Link>
           </li>
           <li>
-            <Link to="/stay" style={activate==='stay' ? {backgroundColor:"#ccc"}:{}}className="link">
+            <Link to="/stay" style={activate==='stay' ? {backgroundColor:"white",color:'blue'}:{color:'white'}} className="link">
               Hotels
             </Link>
           </li>
           <li>
-            <Link to="/train" style={activate==='train' ? {backgroundColor:"#ccc"}:{}} className="link">
+            <Link to="/train" style={activate==='train' ? {backgroundColor:"white",color:'blue'}:{color:'white'}} className="link">
               Trains
             </Link>
           </li>

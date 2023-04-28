@@ -10,6 +10,7 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Checkout from '../pages/Checkout';
 import Layout from './Layout';
+import Footer from './Footer';
 
 
 const App = () => {
@@ -71,8 +72,10 @@ const App = () => {
         {/* <Route path='/' element={<Register></Register>}></Route> */}
         {/* <Route path='/' element={<Checkout></Checkout>}></Route> */}
         <Route path='/checkout' element={<Checkout></Checkout>}></Route>
-      </Routes> 
+      </Routes>
+      
     </BrowserRouter>
+    
     </div>
   )
 }

@@ -22,6 +22,7 @@ const Login = () => {
 
     return (
       < >
+      <div className='availability' style={{height:'60vh',display:'flex',justifyContent:'center',alignItems:'center'}}>
         <div className='loginContainer'>
           <form className='login' 
 
@@ -119,6 +120,7 @@ const Login = () => {
               <Link to='/login' style={{fontSize:"15px",padding:'10px 0px 0px',color:'blue'}}>Login</Link>
             </div>
           </form>
+          </div>
         </div>
       </>
     )

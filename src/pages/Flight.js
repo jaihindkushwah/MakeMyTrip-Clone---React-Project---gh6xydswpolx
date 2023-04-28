@@ -87,9 +87,12 @@ function Flight() {
         onSubmit={setInputs}
         dropDown={dropDown}
         selectedDropdown={setSelectedDropdown}
+        title={'Available Tickets'}
       ></Search>
-      <h2 style={{ marginTop: "50px" }}>Available Tickets</h2>
-      <Availability data={storedData}></Availability>
+        
+        <Availability data={storedData}></Availability>
+
+      
       {/* {console.log(selectedDropdown)}{console.log(flightInput)} */}
     </>
   );

@@ -9,8 +9,18 @@ nav , .links{
     align-items: center;
     flex-direction: row;
 }
+nav{
+    background: white no-repeat;
+    background-image: linear-gradient(to bottom, #051322, #15457c);
+    /* background-size: 100% 280px; */
+    /* color: #464646; */
+    
+}
 
-
+.availability{
+    background: white no-repeat;
+    background-image: linear-gradient(to bottom, #051322, #15457c);
+}
 ul.links>*{
     margin: 10px;
 }
@@ -78,6 +88,7 @@ label>*{
     .searchInputs .dropDown{
          margin:10px 0px 0px 40px;
     }
+
 }
 
 
@@ -94,7 +105,10 @@ h2{
     padding: 10px 100px;
     border: 1px solid black;
     margin-bottom: -20px;
-    border: 2px solid black;
+    border: 2px solid blue;
+    background-color: blue;
+    color: white;
+    
 }
 
 /* input[type="number"]{
@@ -206,7 +220,7 @@ h2{
         flex-direction: row;
         align-items: center;
         margin: 0px;
-        font-size: 14px;
+        font-size: 16px;
         
         /* justify-content: flex-start; */
     }
@@ -247,6 +261,14 @@ h2{
     }
     
 }
+@media screen and (max-width:420px) {
+    .search button{
+        padding: 10px 40px;
+    }
+    .searchInputs{
+        min-height: 40vh;
+    }
+}
 @media screen and (max-width:360px) {
     .checkout{
         margin: 10px;
@@ -257,6 +279,7 @@ h2{
         height: 110%;
         /* padding:0px; */
     }
+    
     
 }
 

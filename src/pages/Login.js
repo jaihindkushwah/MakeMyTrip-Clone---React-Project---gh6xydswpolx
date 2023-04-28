@@ -22,9 +22,10 @@ const Login = () => {
   const navigate=useNavigate();
 
     return (
-      < >
-        <div className='loginContainer'>
-          <form className='login'
+      <>
+      <div style={{height:'55vh',display:'flex',justifyContent:'center',alignItems:'center'}} className='availability'>
+        <div className='loginContainer' >
+          <form className='login' 
 
           // Login form validation 
 
@@ -90,6 +91,7 @@ const Login = () => {
               <Link to='/register' style={{fontSize:"15px",padding:'10px 0px 0px',color:'blue'}}>New user? Sign Up</Link>
             </div>
           </form>
+        </div>
         </div>
       </>
     )
