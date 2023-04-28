@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Footer() {
   const flex={display:'flex',alignItems:'center'};
   return (
-    <div className='footer' style={{...flex,justifyContent:'space-around',minHeight:'30vh',flexDirection:'column'}}>
+    <div className='footer'>
           <ul>
             <li>
               <Link to="/" >
@@ -17,7 +17,7 @@ function Footer() {
               </Link>
             </li>
         </ul>
-          <ul style={{...flex,justifyContent:'space-between',fontSize:'1rem'}}>
+          <ul>
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/'>Help Center</Link></li>
             <li><Link to='/'>Careers</Link></li>
