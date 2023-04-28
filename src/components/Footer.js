@@ -19,7 +19,6 @@ function Footer() {
         </ul>
           <ul>
             <li><Link to='/'>Home</Link></li>
-            <li><Link to='/'>Help Center</Link></li>
             <li><Link to='/'>Careers</Link></li>
             <li><Link to='/'>About</Link></li>
             <li><Link to='/'>FAQ</Link></li>

@@ -317,7 +317,7 @@ h2{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 30vh;
+    min-height: 300px;
     flex-direction: column;
 }
 .footer ul:nth-child(2){
