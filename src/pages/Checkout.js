@@ -27,13 +27,13 @@ function Checkout(props) {
   return (
     <>  
         <div className='checkout'>
-            <div className='summary'>
+            <div className='summary' style={{backgroundColor:'white',borderRadius:'20px'}}>
                 <h2>Fare Summary</h2>
                 <Div title={"Base Fare"} price={Number(price)*.9}></Div>
                 <Div title={"Fee & Surcharges"} price={(Number(price)*.1)+' (10%)'}></Div>
                 <Div title={"Total Amounts"} price={price}></Div>
             </div>
-            <div className='paymentMethod'>
+            <div className='paymentMethod' style={{backgroundColor:'white',borderRadius:'20px'}}>
                 <form onSubmit={
                     (e)=>{e.preventDefault();
                         const data=new FormData(e.target);

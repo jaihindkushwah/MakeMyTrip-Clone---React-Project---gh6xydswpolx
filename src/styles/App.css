@@ -118,11 +118,15 @@ h2{
 
 .checkout {
     margin: 50px 100px;
+    /* padding: 20px; */
+    /* border-radius: 20px; */
     /* width: 100%; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    /* background: white no-repeat; */
+    /* background-image: linear-gradient(to bottom, #051322, #15457c); */
     /* flex-wrap: wrap; */
     /* background-color: rgb(234, 241, 241); */
     height: 45vh;
