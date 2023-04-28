@@ -20,6 +20,7 @@ nav{
 .availability{
     background: white no-repeat;
     background-image: linear-gradient(to bottom, #051322, #15457c);
+    width:100%;
 }
 ul.links>*{
     margin: 10px;
@@ -33,7 +34,7 @@ li{
     list-style: none;
 }
 .link{
-    padding: 10px 15px;
+    padding: 6px 10px;
     color: black;
     text-decoration: none;
     font-weight: 540;
@@ -93,7 +94,7 @@ label>*{
 
 
 h2{
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 .search input{
     height: 25px;
@@ -235,6 +236,7 @@ h2{
     ul.links{
         margin: 0px;
     }
+    
     .searchInputs>.inputContainer label input{
         margin-left: 10px;
     }
@@ -272,6 +274,9 @@ h2{
     }
     .searchInputs{
         min-height: 40vh;
+    }
+    ul.links link{
+        padding: 5px 8px;
     }
 }
 @media screen and (max-width:360px) {
