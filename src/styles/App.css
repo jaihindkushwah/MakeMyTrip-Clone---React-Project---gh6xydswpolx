@@ -357,7 +357,7 @@ h2{
     font-size: 14px;
     padding: 10px 15px;
     text-decoration: none;
-    background-color: black;
+    /* background-color: black; */
     /* width:80px; */
     /* background-color: red; */
 }
