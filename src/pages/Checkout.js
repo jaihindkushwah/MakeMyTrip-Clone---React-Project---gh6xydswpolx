@@ -61,7 +61,12 @@ function Checkout(props) {
                     <input type="text" maxLength={16} onChange={numberValidator}  name="cardno" placeholder='Card Number' />
                     <input type="text" maxLength={4}  onChange={numberValidator} name="expirydate" placeholder='Expiry Date' />
                     <input type="text" maxLength={3}  onChange={numberValidator} name="cvv" placeholder='CVV' />
-                    <button type="submit">Pay</button>
+                    <button type="submit" 
+                    style={{
+                            backgroundImage:'linear-gradient(93deg,#53b2fe,#065af3),linear-gradient(93deg,#53b2fe,#065af3)',
+                            borderRadius:'20px',
+                            border:'none'
+                  }}>Pay</button>
                 </form>
 
             </div>

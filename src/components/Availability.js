@@ -86,9 +86,11 @@ function Availability({ data }) {
                   color: "white",
                   height: "30px",
                   marginBottom: "10px",
-                  borderRadius: "5px",
+                  borderRadius: "20px",
                   backgroundColor: "blue",
-                  marginLeft:'10px'
+                  marginLeft:'10px',
+                  
+                  backgroundImage:'linear-gradient(93deg,#53b2fe,#065af3),linear-gradient(93deg,#53b2fe,#065af3)'
                 }}
               >
                 Book

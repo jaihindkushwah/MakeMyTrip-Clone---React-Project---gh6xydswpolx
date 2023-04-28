@@ -57,7 +57,9 @@ function Search(props) {
           }
           </div>
             <div style={{display:'flex',alignItems:'center',justifyContent:'center'}} >
-              <button type="submit">Search &nbsp;<FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></button>
+              {/* <button type="submit">Search &nbsp;<FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></button> */}
+              <button type="submit">Search</button>
+
           </div>
          </div>
         
