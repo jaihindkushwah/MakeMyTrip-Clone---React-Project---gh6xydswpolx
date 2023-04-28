@@ -65,7 +65,8 @@ function Checkout(props) {
                     style={{
                             backgroundImage:'linear-gradient(93deg,#53b2fe,#065af3),linear-gradient(93deg,#53b2fe,#065af3)',
                             borderRadius:'20px',
-                            border:'none'
+                            border:'none',
+                            color:'white'
                   }}>Pay</button>
                 </form>
 

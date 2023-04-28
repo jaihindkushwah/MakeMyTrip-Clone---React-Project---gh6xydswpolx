@@ -306,3 +306,13 @@ h2{
     }
 } 
 
+/* foooter */
+
+.footer ul:nth-child(2) a{
+    margin: 10px;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    text-decoration: none;
+    background-color: black;
+}

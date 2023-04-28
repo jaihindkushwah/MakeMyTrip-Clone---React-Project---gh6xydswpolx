@@ -33,7 +33,7 @@ function Availability({ data }) {
         </div>
       )}
 
-      <div style={{ minHeight: "20vh", padding: "0 30px" }}>
+      <div style={{ minHeight: "0vh", padding: "0 30px" }}>
         {data.map((item) => {
           // console.log(item);
           return (

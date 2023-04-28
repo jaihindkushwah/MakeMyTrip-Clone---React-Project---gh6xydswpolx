@@ -59,7 +59,7 @@ const App = () => {
     // <div id="main">
     //   <RouterProvider router={router}></RouterProvider>
     //   </div>
-    <div id='main'>
+    <div id='main' style={{minHeight:'100vh'}} className='availability'>
     <BrowserRouter>
     <Layout></Layout>
       <Routes>
@@ -73,7 +73,7 @@ const App = () => {
         {/* <Route path='/' element={<Checkout></Checkout>}></Route> */}
         <Route path='/checkout' element={<Checkout></Checkout>}></Route>
       </Routes>
-      
+      <Footer></Footer>
     </BrowserRouter>
     
     </div>
