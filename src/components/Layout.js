@@ -18,9 +18,10 @@ function IsLoggedInComponent({activate}){
     return(
         <button 
         onClick={(e)=>{
-          alert('Log out successfully');
-          localStorage.removeItem('isLoggedIn');
-          navigate('/');
+          if(window.confirm('Are you sure for log out.')){
+            localStorage.removeItem('isLoggedIn');
+            navigate('/');
+          }
         }} 
         className="link">
         <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
