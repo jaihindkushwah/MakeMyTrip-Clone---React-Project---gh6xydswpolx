@@ -275,6 +275,12 @@ h2{
     padding: 50px;
 }
 @media screen and (max-width:420px) {
+    .searchInputs{
+        font-size: 14px;
+    }
+    .searchInputs>.inputContainer label{
+        font-size: 14px;
+    }
     .search button{
         padding: 10px 40px;
     }
