@@ -18,7 +18,7 @@ function Search(props) {
 
 
   return (
-    <><div style={{padding:'50px'}} className="availability">
+    <><div  className="availability searchContainer">
       <form className="search"
       style={{backgroundColor:'white',borderRadius:'10px'}}
       
