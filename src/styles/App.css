@@ -213,6 +213,7 @@ h2{
     nav{
         flex-direction: column;
         align-items: center;
+        font-size: 14px;
     }
     .searchInputs>.inputContainer{
         display: flex;
