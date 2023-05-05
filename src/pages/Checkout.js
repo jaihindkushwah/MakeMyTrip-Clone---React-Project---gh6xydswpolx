@@ -25,7 +25,7 @@ function Checkout(props) {
     }
 
   return (
-    <>  
+    <div style={{width:'100%'}}>  
         <div className='checkout'>
             <div className='summary' style={{backgroundColor:'white',borderRadius:'20px'}}>
                 <h2>Fare Summary</h2>
@@ -72,7 +72,7 @@ function Checkout(props) {
 
             </div>
         </div>
-    </>
+    </div>
   )
 }
 
