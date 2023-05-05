@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "../components/Search.js";
 import Availability from "../components/Availability.js";
+import SearchIcon from "../components/SearchIcon.js";
 
 const list = [
   { name: "City,OR Location", type: "text" },
@@ -75,6 +76,7 @@ function Stay() {
 
   return (
     <>
+        <SearchIcon img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVqd6FrbyQpV_p_ZMCGuofQcRhttOmStYt6w&usqp=CAU"}/>
       <Search
         list={list}
         onSubmit={setInputs}

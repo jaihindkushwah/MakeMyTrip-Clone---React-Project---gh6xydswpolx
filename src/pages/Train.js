@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "../components/Search.js";
 import Availability from "../components/Availability.js";
+import SearchIcon from "../components/SearchIcon.js";
 
 const list = [
   { name: "From", type: "text" },
@@ -76,6 +77,7 @@ function Train() {
 
   return (
     <>
+    <SearchIcon img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlmqa2HXlhDsTdCVOAB9KZ6Q5XYytdL407takHO9SfceGiQdXDUoQMvL9KEOFef1EsYXM&usqp=CAU"}/>
       <Search
         list={list}
         onSubmit={setInputs}

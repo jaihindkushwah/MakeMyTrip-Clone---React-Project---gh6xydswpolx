@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Search from "../components/Search.js";
 import Availability from "../components/Availability.js";
+import Bottom from "../components/Bottom.js";
+import SearchIcon from "../components/SearchIcon.js";
 
 // Input types data
 const list = [
@@ -82,6 +84,7 @@ function Flight() {
   };
   return (
     <>
+      <SearchIcon img={"https://e7.pngegg.com/pngimages/503/7/png-clipart-airplane-logo-flight-attendant-air-travel-airplane-aviation-avion-text-logo.png"}/>
       <Search
         list={list}
         onSubmit={setInputs}
@@ -91,9 +94,7 @@ function Flight() {
       ></Search>
         
         <Availability data={storedData}></Availability>
-
-      
-      {/* {console.log(selectedDropdown)}{console.log(flightInput)} */}
+        <Bottom></Bottom>
     </>
   );
 }

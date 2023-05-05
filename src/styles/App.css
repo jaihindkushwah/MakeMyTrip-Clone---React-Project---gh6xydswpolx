@@ -380,3 +380,37 @@ h2{
     
     }
 }
+
+/* Search Icon or  Logo */
+
+.searchImgIcon{
+    z-index: 1;
+    background-color: initial;
+}
+.searchImgIcon img{
+    border-radius: 50%;
+    width: 80px;
+}
+@media screen and (max-width:840px) {
+    .searchImgIcon{
+        margin-top: 50px;
+    }
+    .searchImgIcon img{
+        margin-bottom: -85%;
+    }
+    .search{
+        padding-top: 45px;
+    }
+}
+
+@media screen and (min-width:840px) {
+    .searchImgIcon{
+        z-index: 1;
+        background-color: initial;
+    }
+    .searchImgIcon img{
+        border-radius: 50%;
+        margin-bottom: -115%;
+        /* width: 80px; */
+    }
+}

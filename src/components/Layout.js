@@ -59,7 +59,7 @@ function Layout() {
   return (
     <>
     {/* style={style} */}
-      <nav style={{top:'0',left:'0',position:'sticky'}} >
+      <nav style={{top:'0',left:'0',position:'sticky',width:'100%',zIndex:'100'}} >
         <ul>
           <li>
             <Link to="/" >

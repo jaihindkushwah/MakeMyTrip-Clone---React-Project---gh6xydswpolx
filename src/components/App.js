@@ -59,7 +59,7 @@ const App = () => {
     // <div id="main">
     //   <RouterProvider router={router}></RouterProvider>
     //   </div>
-    <div id='main' style={{minHeight:'100vh'}} className='availability'>
+    <div id='main' style={{minHeight:'100vh',display:'flex',alignItems:'center',flexDirection:'column',width:'100%'}} className='availability'>
     <BrowserRouter>
     <Layout></Layout>
       <Routes>

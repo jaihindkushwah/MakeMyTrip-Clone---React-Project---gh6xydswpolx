@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import SearchIcon from "./SearchIcon";
 
 function Search(props) {
 
