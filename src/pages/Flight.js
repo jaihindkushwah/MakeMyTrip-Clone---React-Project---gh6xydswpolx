@@ -3,6 +3,7 @@ import Search from "../components/Search.js";
 import Availability from "../components/Availability.js";
 import Bottom from "../components/Bottom.js";
 import SearchIcon from "../components/SearchIcon.js";
+import logo from '../flightLogo.png'
 
 // Input types data
 const list = [
@@ -84,7 +85,7 @@ function Flight() {
   };
   return (
     <>
-      <SearchIcon img={"https://e7.pngegg.com/pngimages/503/7/png-clipart-airplane-logo-flight-attendant-air-travel-airplane-aviation-avion-text-logo.png"}/>
+      <SearchIcon img={logo}/>
       <Search
         list={list}
         onSubmit={setInputs}
