@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Search from "../components/Search.js";
 import Availability from "../components/Availability.js";
 import SearchIcon from "../components/SearchIcon.js";
+import Bottom from "../components/Bottom.js";
 
 const list = [
   { name: "City,OR Location", type: "text" },
@@ -85,8 +86,7 @@ function Stay() {
         title={'Available Hotels'}
       ></Search>
       <Availability data={storedData}></Availability>
-      {console.log(storedData)}
-      {console.log(inputs)}
+      <Bottom/>
     </>
   )
 }

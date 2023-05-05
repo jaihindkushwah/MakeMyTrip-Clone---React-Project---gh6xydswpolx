@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Search from "../components/Search.js";
 import Availability from "../components/Availability.js";
 import SearchIcon from "../components/SearchIcon.js";
+import Bottom from "../components/Bottom.js";
 
 const list = [
   { name: "From", type: "text" },
@@ -86,8 +87,7 @@ function Train() {
         title={'Available Tickets'}
       ></Search>
       <Availability data={storedData}></Availability>
-
-      {console.log(inputs)}
+      <Bottom/>
     </>
   );
 }
