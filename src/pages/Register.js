@@ -21,7 +21,7 @@ const Login = () => {
     const navigate=useNavigate();
 
     return (
-      < >
+      <>
       <div className='availability' style={{height:'60vh',display:'flex',justifyContent:'center',alignItems:'center'}}>
         <div className='loginContainer'>
           <form className='login' 

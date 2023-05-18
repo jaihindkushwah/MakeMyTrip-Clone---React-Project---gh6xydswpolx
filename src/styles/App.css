@@ -11,7 +11,7 @@ nav , .links{
 }
 nav{
     background: white no-repeat;
-    background-image: linear-gradient(to bottom, #051322, #15457c);
+    background-image: linear-gradient(to bottom, #1264bd, #1972d8);
     /* background-size: 100% 280px; */
     /* color: #464646; */
     
@@ -19,7 +19,7 @@ nav{
 
 .availability{
     background: white no-repeat;
-    background-image: linear-gradient(to bottom, #051322, #15457c);
+    background-image: linear-gradient(to bottom, #0f2d4e, #296dc0);
     width:100%;
 }
 ul.links>*{
